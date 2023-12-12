@@ -1,0 +1,13 @@
+2023-12-11 20:16:31.569 -03 [22260] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2023-12-11 20:16:31.573 -03 [22260] LOG:  listening on IPv6 address "::1", port 5432
+2023-12-11 20:16:31.573 -03 [22260] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-12-11 20:16:31.659 -03 [25084] LOG:  sistema de banco de dados foi interrompido; última execução em 2023-12-04 20:36:10 -03
+2023-12-11 20:16:32.288 -03 [25084] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2023-12-11 20:16:32.294 -03 [25084] LOG:  redo inicia em 0/1A33B38
+2023-12-11 20:16:32.295 -03 [25084] LOG:  invalid record length at 0/1A33C20: expected at least 24, got 0
+2023-12-11 20:16:32.295 -03 [25084] LOG:  redo done at 0/1A33BE8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2023-12-11 20:16:32.303 -03 [5320] LOG:  checkpoint starting: end-of-recovery immediate wait
+2023-12-11 20:16:32.318 -03 [5320] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.003 s, total=0.018 s; sync files=2, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A33C20, redo lsn=0/1A33C20
+2023-12-11 20:16:32.346 -03 [22260] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2023-12-11 20:21:32.332 -03 [5320] LOG:  checkpoint starting: time
+2023-12-11 20:21:38.608 -03 [5320] LOG:  checkpoint complete: wrote 58 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.232 s, sync=0.034 s, total=6.276 s; sync files=43, longest=0.004 s, average=0.001 s; distance=206 kB, estimate=206 kB; lsn=0/1A674B8, redo lsn=0/1A67480
