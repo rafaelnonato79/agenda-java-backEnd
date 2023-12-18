@@ -25,4 +25,8 @@ public class Contato {
     @Column(name = "CON_EMAIL", length = 200)
     private String email;
 
+    @JoinColumn(name = "CON_END_ID")
+    @ManyToOne
+    private Endereco endereco;
+
 }

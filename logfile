@@ -11,3 +11,15 @@
 2023-12-11 20:16:32.346 -03 [22260] LOG:  sistema de banco de dados está pronto para aceitar conexões
 2023-12-11 20:21:32.332 -03 [5320] LOG:  checkpoint starting: time
 2023-12-11 20:21:38.608 -03 [5320] LOG:  checkpoint complete: wrote 58 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.232 s, sync=0.034 s, total=6.276 s; sync files=43, longest=0.004 s, average=0.001 s; distance=206 kB, estimate=206 kB; lsn=0/1A674B8, redo lsn=0/1A67480
+2023-12-11 21:01:32.662 -03 [5320] LOG:  checkpoint starting: time
+2023-12-11 21:01:33.673 -03 [5320] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.993 s, sync=0.010 s, total=1.012 s; sync files=9, longest=0.004 s, average=0.002 s; distance=1 kB, estimate=185 kB; lsn=0/1A67A08, redo lsn=0/1A679D0
+2023-12-11 21:05:05.004 -03 [22260] LOG:  processo servidor (PID 7944) foi terminado pela exceção 0xC000013A
+2023-12-11 21:05:05.004 -03 [22260] DETALHE:  Processo que falhou estava executando: SELECT am.oid,am.* FROM pg_catalog.pg_am am 
+	ORDER BY am.oid
+2023-12-11 21:05:05.004 -03 [22260] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2023-12-11 21:05:05.006 -03 [22260] LOG:  terminando quaisquer outros processos servidor ativos
+2023-12-11 21:05:05.036 -03 [22260] LOG:  todos os processos servidor foram terminados; reinicializando
+2023-12-11 21:05:05.072 -03 [22260] LOG:  processo de inicialização (PID 14060) foi terminado pela exceção 0xC0000142
+2023-12-11 21:05:05.072 -03 [22260] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2023-12-11 21:05:05.073 -03 [22260] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2023-12-11 21:05:05.075 -03 [22260] LOG:  sistema de banco de dados está desligado
