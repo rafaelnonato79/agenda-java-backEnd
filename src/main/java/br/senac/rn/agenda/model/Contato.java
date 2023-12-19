@@ -18,8 +18,8 @@ public class Contato {
     @Column(name = "CON_NOME", length = 100)
     private String nome;
 
-    @JoinColumn(name = "CON_FONE_ID")
-    @ManyToOne
+    @JoinColumn(name = "CON_FON_ID")
+    @ManyToOne(fetch = FetchType.EAGER)
     private Fone fone;
 
     @Column(name = "CON_EMAIL", length = 200)
