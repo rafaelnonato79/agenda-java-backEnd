@@ -19,14 +19,14 @@ public class Contato {
     private String nome;
 
     @JoinColumn(name = "CON_FON_ID")
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Fone fone;
 
     @Column(name = "CON_EMAIL", length = 200)
     private String email;
 
     @JoinColumn(name = "CON_END_ID")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 
 }

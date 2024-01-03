@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("contatos")
+@CrossOrigin("*")
+@RequestMapping("/contatos")
 public class ContatoController {
 
     @Autowired
@@ -43,6 +44,5 @@ public class ContatoController {
     public void excluir(@PathVariable Integer id){
         service.excluir(id);
     }
-
 
 }

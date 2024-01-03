@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("enderecos")
 public class EnderecoController {
 
@@ -29,7 +30,7 @@ public class EnderecoController {
     public void editar(@PathVariable Integer id, @RequestBody Endereco enderecoEditado){
         Endereco endereco = service.listarPorId(id);
         endereco.setLogradouro(enderecoEditado.getLogradouro());
-        endereco.setNumero(enderecoEditado.getNumero());
+        endereco.setNumeroEndereco(enderecoEditado.getNumeroEndereco());
         endereco.setBairro(enderecoEditado.getBairro());
         endereco.setCidade(enderecoEditado.getCidade());
         endereco.setEstado(enderecoEditado.getEstado());
