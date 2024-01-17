@@ -26,7 +26,7 @@ public class Contato {
     private String email;
 
     @JoinColumn(name = "CON_END_ID")
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private Endereco endereco;
 
 }

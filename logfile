@@ -210,4 +210,50 @@
 2023-12-31 21:22:56.854 -03 [992] LOG:  background worker "logical replication launcher" (PID 1776) foi terminado pela exceção 0xC000013A
 2023-12-31 21:22:56.854 -03 [992] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
 2023-12-31 21:22:56.855 -03 [992] LOG:  terminando quaisquer outros processos servidor ativos
-^C
+^C2024-01-15 19:09:19.029 -03 [11888] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-15 19:09:19.033 -03 [11888] LOG:  listening on IPv6 address "::1", port 5432
+2024-01-15 19:09:19.033 -03 [11888] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-15 19:09:19.089 -03 [11560] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-01-09 20:59:18 -03
+2024-01-15 19:09:19.498 -03 [11560] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-01-15 19:09:19.502 -03 [11560] LOG:  redo inicia em 0/1FB1F88
+2024-01-15 19:09:19.502 -03 [11560] LOG:  invalid record length at 0/1FB2088: expected at least 24, got 0
+2024-01-15 19:09:19.502 -03 [11560] LOG:  redo done at 0/1FB2050 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-01-15 19:09:19.507 -03 [8104] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-01-15 19:09:19.516 -03 [8104] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.011 s; sync files=2, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1FB2088, redo lsn=0/1FB2088
+2024-01-15 19:09:19.528 -03 [11888] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-01-15 19:59:19.608 -03 [8104] LOG:  checkpoint starting: time
+2024-01-15 19:59:20.276 -03 [8104] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.651 s, sync=0.006 s, total=0.669 s; sync files=7, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=1 kB; lsn=0/1FB2550, redo lsn=0/1FB2518
+2024-01-15 20:34:19.316 -03 [8104] LOG:  checkpoint starting: time
+2024-01-15 20:34:20.863 -03 [8104] LOG:  checkpoint complete: wrote 15 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.531 s, sync=0.008 s, total=1.549 s; sync files=14, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=1 kB; lsn=0/1FB2C70, redo lsn=0/1FB2C38
+2024-01-15 20:39:19.864 -03 [8104] LOG:  checkpoint starting: time
+2024-01-15 20:39:20.093 -03 [8104] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.215 s, sync=0.006 s, total=0.230 s; sync files=3, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=1 kB; lsn=0/1FB3048, redo lsn=0/1FB3010
+2024-01-15 20:44:19.093 -03 [8104] LOG:  checkpoint starting: time
+2024-01-15 20:44:19.539 -03 [8104] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.433 s, sync=0.004 s, total=0.446 s; sync files=5, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=2 kB; lsn=0/1FB3950, redo lsn=0/1FB3918
+2024-01-15 20:45:24.667 -03 [9508] ERRO:  duplicar valor da chave viola a restriÃ§Ã£o de unicidade "tb_enderecos_pkey"
+2024-01-15 20:45:24.667 -03 [9508] DETALHE:  Chave (end_id)=(2) jÃ¡ existe.
+2024-01-15 20:45:24.667 -03 [9508] COMANDO:  insert into tb_enderecos (end_bairro,end_cep,end_cidade,end_estado,end_logradouro,end_numero) values ($1,$2,$3,$4,$5,$6)
+	RETURNING *
+2024-01-15 20:45:38.594 -03 [9508] ERRO:  duplicar valor da chave viola a restriÃ§Ã£o de unicidade "tb_enderecos_pkey"
+2024-01-15 20:45:38.594 -03 [9508] DETALHE:  Chave (end_id)=(3) jÃ¡ existe.
+2024-01-15 20:45:38.594 -03 [9508] COMANDO:  insert into tb_enderecos (end_bairro,end_cep,end_cidade,end_estado,end_logradouro,end_numero) values ($1,$2,$3,$4,$5,$6)
+	RETURNING *
+2024-01-15 20:46:25.872 -03 [9292] ERRO:  banco de dados "db_agenda" estÃ¡ sendo acessado por outros usuÃ¡rios
+2024-01-15 20:46:25.872 -03 [9292] DETALHE:  HÃ¡ 10 outras sessÃµes utilizando o banco de dados.
+2024-01-15 20:46:25.872 -03 [9292] COMANDO:  DROP DATABASE db_agenda
+2024-01-15 20:46:42.045 -03 [8104] LOG:  checkpoint starting: immediate force wait
+2024-01-15 20:46:42.056 -03 [8104] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.011 s; sync files=2, longest=0.002 s, average=0.001 s; distance=2 kB, estimate=2 kB; lsn=0/1FB4208, redo lsn=0/1FB41D0
+2024-01-15 20:51:42.067 -03 [8104] LOG:  checkpoint starting: time
+2024-01-15 20:53:30.618 -03 [8104] LOG:  checkpoint complete: wrote 989 buffers (6.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=108.364 s, sync=0.161 s, total=108.551 s; sync files=316, longest=0.003 s, average=0.001 s; distance=4625 kB, estimate=4625 kB; lsn=0/2438BE8, redo lsn=0/2438840
+2024-01-15 20:54:30.046 -03 [8104] LOG:  checkpoint starting: immediate force wait
+2024-01-15 20:54:30.058 -03 [8104] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.012 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=4163 kB; lsn=0/2439208, redo lsn=0/24391D0
+2024-01-15 20:59:30.051 -03 [8104] LOG:  checkpoint starting: time
+2024-01-15 21:01:17.294 -03 [8104] LOG:  checkpoint complete: wrote 992 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=107.118 s, sync=0.117 s, total=107.243 s; sync files=308, longest=0.002 s, average=0.001 s; distance=4605 kB, estimate=4605 kB; lsn=0/28B8748, redo lsn=0/28B8710
+2024-01-15 21:05:31.439 -03 [11888] LOG:  processo servidor (PID 1580) foi terminado pela exceção 0xC000013A
+2024-01-15 21:05:31.439 -03 [11888] DETALHE:  Processo que falhou estava executando: SET application_name = 'PostgreSQL JDBC Driver'
+2024-01-15 21:05:31.439 -03 [11888] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-15 21:05:31.439 -03 [11888] LOG:  terminando quaisquer outros processos servidor ativos
+2024-01-15 21:05:31.482 -03 [11888] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-01-15 21:05:31.518 -03 [11888] LOG:  processo de inicialização (PID 9320) foi terminado pela exceção 0xC0000142
+2024-01-15 21:05:31.518 -03 [11888] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-15 21:05:31.518 -03 [11888] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-01-15 21:05:31.520 -03 [11888] LOG:  sistema de banco de dados está desligado

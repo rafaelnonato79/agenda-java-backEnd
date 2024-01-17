@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ContatoRepository extends JpaRepository<Contato, Integer> {
+public interface  ContatoRepository extends JpaRepository<Contato, Integer> {
 
     @Query(value = "SELECT c FROM Contato c WHERE c.fone = :fone")
     List<Contato> findByFone(@Param(value = "fone") String fone);
