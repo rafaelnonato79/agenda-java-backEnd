@@ -30,12 +30,12 @@
                 <td th:text="${contato.fone.numero}"></td>
                 <td th:text="${contato.fone.tipo}"></td>
                 <td>
-                    <button type="button" class="btn btn-secondary" th:title="'Editar ' + ${contato.nome}">
+                    <a th:href="@{/editar/{id}(id=${contato.id})}" class="btn btn-secondary" th:title="'Editar '+ ${contato.nome}">
                         <i class="bi bi-pencil-square"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger" th:title="'Excluir ' + ${contato.nome}">
+                    </a>
+                    <a th:href="@{/excluir/{id}(id=${contato.id})}" class="btn btn-danger"th:title="'Excluir ' + ${contato.nome}">
                         <i class="bi bi-trash"></i>
-                    </button>
+                    </a>
                 </td>
             </tr>
         </tbody>

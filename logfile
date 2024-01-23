@@ -257,3 +257,27 @@
 2024-01-15 21:05:31.518 -03 [11888] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
 2024-01-15 21:05:31.518 -03 [11888] LOG:  interrompendo inicialização porque o processo de inicialização falhou
 2024-01-15 21:05:31.520 -03 [11888] LOG:  sistema de banco de dados está desligado
+2024-01-16 19:00:14.088 -03 [6596] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-16 19:00:14.094 -03 [6596] LOG:  listening on IPv6 address "::1", port 5432
+2024-01-16 19:00:14.094 -03 [6596] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-16 19:00:14.264 -03 [2608] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-01-15 21:01:17 -03
+2024-01-16 19:00:14.872 -03 [2608] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-01-16 19:00:14.877 -03 [2608] LOG:  redo inicia em 0/28B8710
+2024-01-16 19:00:14.877 -03 [2608] LOG:  invalid record length at 0/28B87F8: expected at least 24, got 0
+2024-01-16 19:00:14.877 -03 [2608] LOG:  redo done at 0/28B87C0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-01-16 19:00:14.883 -03 [8344] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-01-16 19:00:14.893 -03 [8344] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.013 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/28B87F8, redo lsn=0/28B87F8
+2024-01-16 19:00:14.911 -03 [6596] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-01-16 19:05:14.785 -03 [8344] LOG:  checkpoint starting: time
+2024-01-16 19:05:16.547 -03 [8344] LOG:  checkpoint complete: wrote 17 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.746 s, sync=0.006 s, total=1.762 s; sync files=12, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=1 kB; lsn=0/28B8DE0, redo lsn=0/28B8DA8
+2024-01-16 19:10:14.554 -03 [8344] LOG:  checkpoint starting: time
+2024-01-16 19:10:15.551 -03 [8344] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.984 s, sync=0.008 s, total=0.998 s; sync files=10, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=1 kB; lsn=0/28B94E0, redo lsn=0/28B94A8
+2024-01-16 21:18:20.423 -03 [6596] LOG:  processo servidor (PID 12996) foi terminado pela exceção 0xC000013A
+2024-01-16 21:18:20.423 -03 [6596] DETALHE:  Processo que falhou estava executando: SELECT i.*,c.relnamespace FROM pg_catalog.pg_inherits i,pg_catalog.pg_class c WHERE i.inhrelid=$1 AND c.oid=i.inhparent ORDER BY i.inhseqno
+2024-01-16 21:18:20.423 -03 [6596] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-16 21:18:20.424 -03 [6596] LOG:  terminando quaisquer outros processos servidor ativos
+2024-01-16 21:18:20.460 -03 [6596] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-01-16 21:18:20.496 -03 [6596] LOG:  processo de inicialização (PID 876) foi terminado pela exceção 0xC0000142
+2024-01-16 21:18:20.496 -03 [6596] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-16 21:18:20.496 -03 [6596] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-01-16 21:18:20.498 -03 [6596] LOG:  sistema de banco de dados está desligado

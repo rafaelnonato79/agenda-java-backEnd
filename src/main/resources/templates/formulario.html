@@ -12,14 +12,14 @@
 <body>
     <div class="container">
 
-        <H1>Cadastro de Contato</H1>
+        <H1 class="text-center m-5">Cadastro de Contato</H1>
         <div>
             <form th:action="@{/salvar}" th:object="${contato}" method="post" class="row g-3">
                 <input type="hidden" th:field="*{id}">
                 <div class="form-group col-md-4">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                        <input type="text" th:field="*{nome}" class="form-control">
+                        <input type="text" th:field="*{nome}" class="form-control" placeholder="Nome">
                     </div>
                 </div>
 
@@ -33,38 +33,32 @@
                 <div class="form-group col-md-6">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i class="bi bi-telephone"></i></span>
-                        <input type="text" th:field="*{fone.numero}" class="form-control">
+                        <input type="text" th:field="*{fone.numero}" class="form-control" placeholder="Telefone">
                     </div>
                 </div>
                 <div class="form-group col-md-4">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
-                        <input type="text" th:field="*{email}" class="form-control">
+                        <input type="text" th:field="*{email}" class="form-control" placeholder="Email">
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="logradouro" class="form-label col-md-5">Logradouro</label>
-                    <input type="text" th:field="*{endereco.logradouro}" class="form-control">
+                    <input type="text" th:field="*{endereco.logradouro}" class="form-control" placeholder="Logradouro">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="numeroEndereco" class="form-label">Numero</label>
-                    <input type="text" th:field="*{endereco.numeroEndereco}" class="form-control">
+                    <input type="text" th:field="*{endereco.numeroEndereco}" class="form-control" placeholder="Numero">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="bairro" class="form-label">Bairro</label>
-                    <input type="text" th:field="*{endereco.bairro}" class="form-control">
+                    <input type="text" th:field="*{endereco.bairro}" class="form-control" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="cidade" class="form-label">Cidade</label>
-                    <input type="text" th:field="*{endereco.cidade}" class="form-control">
+                    <input type="text" th:field="*{endereco.cidade}" class="form-control" placeholder="Cidade">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="estado" class="form-label">Estado</label>
-                    <input type="text" th:field="*{endereco.estado}" class="form-control">
+                    <input type="text" th:field="*{endereco.estado}" class="form-control" placeholder="Estado">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="cep" class="form-label">CEP</label>
-                    <input type="text" th:field="*{endereco.cep}" class="form-control">
+                    <input type="text" th:field="*{endereco.cep}" class="form-control" placeholder="CEP">
                 </div>
                 <div class="d-grid gap-2 col-2 mx-auto">
                     <button type="submit" class="btn btn-primary mt-3">Salvar</button>
