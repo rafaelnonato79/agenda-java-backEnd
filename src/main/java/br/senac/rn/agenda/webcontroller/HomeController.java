@@ -57,4 +57,10 @@ public class HomeController {
         service.excluir(id);
         return "redirect:/";
     }
+
+    @GetMapping("login")
+    public String login(){
+        return "login";
+    }
 }
+
