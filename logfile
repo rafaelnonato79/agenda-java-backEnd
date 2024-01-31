@@ -316,3 +316,32 @@
 2024-01-29 18:58:36.034 -03 [6360] LOG:  checkpoint starting: end-of-recovery immediate wait
 2024-01-29 18:58:36.045 -03 [6360] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.014 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/28BA788, redo lsn=0/28BA788
 2024-01-29 18:58:36.062 -03 [9412] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-01-29 21:16:27.822 -03 [9412] LOG:  processo servidor (PID 9132) foi terminado pela exceção 0xC000013A
+2024-01-29 21:16:27.822 -03 [9412] DETALHE:  Processo que falhou estava executando: SELECT c.contoencoding as encid,pg_catalog.pg_encoding_to_char(c.contoencoding) as encname
+	FROM pg_catalog.pg_conversion c
+	GROUP BY c.contoencoding
+	ORDER BY 2
+	
+2024-01-29 21:16:27.822 -03 [9412] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-29 21:16:27.823 -03 [9412] LOG:  terminando quaisquer outros processos servidor ativos
+2024-01-29 21:16:27.854 -03 [9412] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-01-29 21:16:27.888 -03 [9412] LOG:  processo de inicialização (PID 12980) foi terminado pela exceção 0xC0000142
+2024-01-29 21:16:27.888 -03 [9412] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-29 21:16:27.888 -03 [9412] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-01-29 21:16:27.890 -03 [9412] LOG:  sistema de banco de dados está desligado
+2024-01-30 18:44:24.830 -03 [13296] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-30 18:44:24.834 -03 [13296] LOG:  listening on IPv6 address "::1", port 5432
+2024-01-30 18:44:24.834 -03 [13296] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-30 18:44:24.907 -03 [15372] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-01-29 18:58:36 -03
+2024-01-30 18:44:25.738 -03 [15372] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-01-30 18:44:25.743 -03 [15372] LOG:  redo inicia em 0/28BA800
+2024-01-30 18:44:25.743 -03 [15372] LOG:  invalid record length at 0/28BA838: expected at least 24, got 0
+2024-01-30 18:44:25.743 -03 [15372] LOG:  redo done at 0/28BA800 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-01-30 18:44:25.748 -03 [17444] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-01-30 18:44:25.756 -03 [17444] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.010 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/28BA838, redo lsn=0/28BA838
+2024-01-30 18:44:25.774 -03 [13296] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-01-30 19:35:19.855 -03 [13296] LOG:  could not reserve shared memory region (addr=000001E69DD30000) for child 0000000000001414: error code 487
+2024-01-30 20:44:26.069 -03 [17444] LOG:  checkpoint starting: time
+2024-01-30 20:44:29.942 -03 [17444] LOG:  checkpoint complete: wrote 36 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.834 s, sync=0.022 s, total=3.876 s; sync files=35, longest=0.003 s, average=0.001 s; distance=151 kB, estimate=151 kB; lsn=0/28E0850, redo lsn=0/28E0818
+2024-01-30 20:49:26.944 -03 [17444] LOG:  checkpoint starting: time
+2024-01-30 20:49:31.169 -03 [17444] LOG:  checkpoint complete: wrote 39 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.190 s, sync=0.026 s, total=4.225 s; sync files=35, longest=0.007 s, average=0.001 s; distance=180 kB, estimate=180 kB; lsn=0/290DC28, redo lsn=0/290DBF0
