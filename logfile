@@ -345,3 +345,12 @@
 2024-01-30 20:44:29.942 -03 [17444] LOG:  checkpoint complete: wrote 36 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.834 s, sync=0.022 s, total=3.876 s; sync files=35, longest=0.003 s, average=0.001 s; distance=151 kB, estimate=151 kB; lsn=0/28E0850, redo lsn=0/28E0818
 2024-01-30 20:49:26.944 -03 [17444] LOG:  checkpoint starting: time
 2024-01-30 20:49:31.169 -03 [17444] LOG:  checkpoint complete: wrote 39 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.190 s, sync=0.026 s, total=4.225 s; sync files=35, longest=0.007 s, average=0.001 s; distance=180 kB, estimate=180 kB; lsn=0/290DC28, redo lsn=0/290DBF0
+2024-01-30 21:20:33.337 -03 [13296] LOG:  processo servidor (PID 17964) foi terminado pela exceção 0xC000013A
+2024-01-30 21:20:33.337 -03 [13296] DETALHE:  Processo que falhou estava executando: SELECT i.*,c.relnamespace FROM pg_catalog.pg_inherits i,pg_catalog.pg_class c WHERE i.inhrelid=$1 AND c.oid=i.inhparent ORDER BY i.inhseqno
+2024-01-30 21:20:33.337 -03 [13296] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-30 21:20:33.337 -03 [13296] LOG:  terminando quaisquer outros processos servidor ativos
+2024-01-30 21:20:33.360 -03 [13296] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-01-30 21:20:33.386 -03 [13296] LOG:  processo de inicialização (PID 8636) foi terminado pela exceção 0xC0000142
+2024-01-30 21:20:33.386 -03 [13296] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-01-30 21:20:33.386 -03 [13296] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-01-30 21:20:33.388 -03 [13296] LOG:  sistema de banco de dados está desligado

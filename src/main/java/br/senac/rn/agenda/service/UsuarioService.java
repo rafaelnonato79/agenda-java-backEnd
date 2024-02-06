@@ -2,30 +2,32 @@ package br.senac.rn.agenda.service;
 
 import br.senac.rn.agenda.model.Usuario;
 import br.senac.rn.agenda.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UsuarioService {
+public class UsuarioService implements UserDetailsService {
 
-    private UsuarioRepository repository;
+    private final UsuarioRepository repository;
 
-    public void salvar(Usuario usuario){
-        repository.save(usuario);
+    @Autowired
+    public UsuarioService(UsuarioRepository repository){
+        this.repository = repository;
     }
 
-    public List<Usuario> listarTodos(){
-        return repository.findAll();
+
+    @Override
+    public UserDetails loadUserByUsername(String usuario) throws UsernameNotFoundException {
+        Usuario user = repository.findByUsuario(usuario);
+        if(user == null){
+            throw new UsernameNotFoundException("Usuario não encontrado");
+        }
+        return user;
+
     }
-
-    public Usuario listarPorId(Integer id){
-        return repository.findById(id).get();
-    }
-
-    public void excluir(Integer id) { repository.deleteById(id);}
-
-
 }
