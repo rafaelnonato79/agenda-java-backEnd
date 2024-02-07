@@ -3,7 +3,9 @@ package br.senac.rn.agenda.webcontroller;
 
 import br.senac.rn.agenda.model.Contato;
 import br.senac.rn.agenda.model.TipoFone;
+import br.senac.rn.agenda.model.Usuario;
 import br.senac.rn.agenda.service.ContatoService;
+import br.senac.rn.agenda.service.UsuarioService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +21,11 @@ import java.util.List;
 public class HomeController {
 
     private final ContatoService service;
+    private final UsuarioService usuarioService;
 
-    public HomeController(ContatoService service){
+    public HomeController(ContatoService service, UsuarioService usuarioService){
         this.service = service;
+        this.usuarioService = usuarioService;
     }
     @GetMapping
     public String index(Model model){
@@ -61,6 +65,17 @@ public class HomeController {
     @GetMapping("login")
     public String login(){
         return "login";
+    }
+
+    @GetMapping("cadastro")
+    public String cadastro(){
+        return "cadastro";
+    }
+
+    @PostMapping("salvar-usuario")
+    public String salvar(Usuario usuario){
+        usuarioService.salvar(usuario);
+        return "redirect:/";
     }
 }
 

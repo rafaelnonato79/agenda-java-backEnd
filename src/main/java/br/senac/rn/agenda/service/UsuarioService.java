@@ -30,4 +30,7 @@ public class UsuarioService implements UserDetailsService {
         return user;
 
     }
+
+    public void salvar(Usuario usuario) { repository.save(usuario);
+    }
 }

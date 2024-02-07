@@ -354,3 +354,23 @@
 2024-01-30 21:20:33.386 -03 [13296] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
 2024-01-30 21:20:33.386 -03 [13296] LOG:  interrompendo inicialização porque o processo de inicialização falhou
 2024-01-30 21:20:33.388 -03 [13296] LOG:  sistema de banco de dados está desligado
+2024-02-06 19:24:54.388 -03 [16824] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-02-06 19:24:54.392 -03 [16824] LOG:  listening on IPv6 address "::1", port 5432
+2024-02-06 19:24:54.392 -03 [16824] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-06 19:24:54.466 -03 [22596] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-01-30 20:49:31 -03
+2024-02-06 19:24:55.312 -03 [22596] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-02-06 19:24:55.316 -03 [22596] LOG:  redo inicia em 0/290DBF0
+2024-02-06 19:24:55.316 -03 [22596] LOG:  invalid record length at 0/290DCD8: expected at least 24, got 0
+2024-02-06 19:24:55.316 -03 [22596] LOG:  redo done at 0/290DCA0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-02-06 19:24:55.321 -03 [7548] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-02-06 19:24:55.330 -03 [7548] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.012 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/290DCD8, redo lsn=0/290DCD8
+2024-02-06 19:24:55.344 -03 [16824] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-02-06 19:29:55.341 -03 [7548] LOG:  checkpoint starting: time
+2024-02-06 19:30:00.600 -03 [7548] LOG:  checkpoint complete: wrote 48 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.214 s, sync=0.027 s, total=5.259 s; sync files=42, longest=0.002 s, average=0.001 s; distance=206 kB, estimate=206 kB; lsn=0/29416A8, redo lsn=0/2941670
+2024-02-06 19:35:37.284 -03 [8940] ERRO:  nÃ£o pode remover tabela tb_papeis porque outros objetos dependem dele
+2024-02-06 19:35:37.284 -03 [8940] DETALHE:  restriÃ§Ã£o fk8kam8ajtapqydbxhan6llcah7 em tabela tb_usuario_papeis depende de tabela tb_papeis
+	restriÃ§Ã£o fk2y2r7mbon96mk02mok7vgi2oj em tabela tb_papeis_usuario depende de tabela tb_papeis
+2024-02-06 19:35:37.284 -03 [8940] DICA:  Utilize DROP ... CASCADE para remover os objetos dependentes tambÃ©m.
+2024-02-06 19:35:37.284 -03 [8940] COMANDO:  DROP TABLE public.tb_papeis
+2024-02-06 19:39:55.622 -03 [7548] LOG:  checkpoint starting: time
+2024-02-06 19:39:59.051 -03 [7548] LOG:  checkpoint complete: wrote 32 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.393 s, sync=0.023 s, total=3.430 s; sync files=27, longest=0.007 s, average=0.001 s; distance=142 kB, estimate=200 kB; lsn=0/29651B0, redo lsn=0/2965178

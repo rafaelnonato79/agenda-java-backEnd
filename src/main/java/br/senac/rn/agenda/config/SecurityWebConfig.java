@@ -31,6 +31,8 @@ public class SecurityWebConfig{
         http
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/").permitAll()
+                        .requestMatchers("/cadastro").permitAll()
+                        .requestMatchers("/usuarios").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
