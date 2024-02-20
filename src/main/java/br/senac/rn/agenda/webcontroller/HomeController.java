@@ -67,15 +67,7 @@ public class HomeController {
         return "login";
     }
 
-    @GetMapping("cadastro")
-    public String cadastro(){
-        return "cadastro";
-    }
 
-    @PostMapping("salvar-usuario")
-    public String salvar(Usuario usuario){
-        usuarioService.salvar(usuario);
-        return "redirect:/";
-    }
+
 }
 

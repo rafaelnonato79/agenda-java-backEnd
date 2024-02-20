@@ -374,3 +374,46 @@
 2024-02-06 19:35:37.284 -03 [8940] COMANDO:  DROP TABLE public.tb_papeis
 2024-02-06 19:39:55.622 -03 [7548] LOG:  checkpoint starting: time
 2024-02-06 19:39:59.051 -03 [7548] LOG:  checkpoint complete: wrote 32 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.393 s, sync=0.023 s, total=3.430 s; sync files=27, longest=0.007 s, average=0.001 s; distance=142 kB, estimate=200 kB; lsn=0/29651B0, redo lsn=0/2965178
+2024-02-06 21:14:00.145 -03 [15576] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [19060] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [2968] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [12524] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [18404] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [14968] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [16616] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [9008] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [6524] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:14:00.145 -03 [23616] LOG:  nÃ£o pÃ´de receber dados do cliente: unrecognized winsock error 10054
+2024-02-06 21:17:49.608 -03 [16824] LOG:  processo servidor (PID 19100) foi terminado pela exceção 0xC000013A
+2024-02-06 21:17:49.608 -03 [16824] DETALHE:  Processo que falhou estava executando: SHOW TRANSACTION ISOLATION LEVEL
+2024-02-06 21:17:49.608 -03 [16824] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-02-06 21:17:49.608 -03 [16824] LOG:  terminando quaisquer outros processos servidor ativos
+2024-02-06 21:17:49.642 -03 [16824] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-02-06 21:17:49.702 -03 [16824] LOG:  processo de inicialização (PID 8320) foi terminado pela exceção 0xC0000142
+2024-02-06 21:17:49.702 -03 [16824] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-02-06 21:17:49.703 -03 [16824] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-02-06 21:17:49.704 -03 [16824] LOG:  sistema de banco de dados está desligado
+2024-02-19 20:25:02.592 -03 [14548] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-02-19 20:25:02.598 -03 [14548] LOG:  listening on IPv6 address "::1", port 5432
+2024-02-19 20:25:02.598 -03 [14548] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-19 20:25:02.666 -03 [20120] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-02-06 19:39:59 -03
+2024-02-19 20:25:03.498 -03 [20120] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-02-19 20:25:03.502 -03 [20120] LOG:  redo inicia em 0/2965178
+2024-02-19 20:25:03.502 -03 [20120] LOG:  invalid record length at 0/2965260: expected at least 24, got 0
+2024-02-19 20:25:03.502 -03 [20120] LOG:  redo done at 0/2965228 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-02-19 20:25:03.508 -03 [21272] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-02-19 20:25:03.521 -03 [21272] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.015 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/2965260, redo lsn=0/2965260
+2024-02-19 20:25:03.538 -03 [14548] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-02-19 20:55:03.610 -03 [21272] LOG:  checkpoint starting: time
+2024-02-19 20:55:04.300 -03 [21272] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.661 s, sync=0.008 s, total=0.699 s; sync files=6, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/2965498, redo lsn=0/2965460
+2024-02-19 21:00:03.301 -03 [21272] LOG:  checkpoint starting: time
+2024-02-19 21:00:03.412 -03 [21272] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.003 s, total=0.112 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/2965668, redo lsn=0/2965630
+2024-02-19 21:20:32.441 -03 [14548] LOG:  processo servidor (PID 24124) foi terminado pela exceção 0xC000013A
+2024-02-19 21:20:32.441 -03 [14548] DETALHE:  Processo que falhou estava executando: SELECT DISTINCT connamespace FROM pg_catalog.pg_constraint WHERE confrelid=$1
+2024-02-19 21:20:32.441 -03 [14548] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-02-19 21:20:32.442 -03 [14548] LOG:  terminando quaisquer outros processos servidor ativos
+2024-02-19 21:20:32.474 -03 [14548] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-02-19 21:20:32.542 -03 [14548] LOG:  processo de inicialização (PID 1032) foi terminado pela exceção 0xC0000142
+2024-02-19 21:20:32.542 -03 [14548] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-02-19 21:20:32.543 -03 [14548] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-02-19 21:20:32.545 -03 [14548] LOG:  sistema de banco de dados está desligado

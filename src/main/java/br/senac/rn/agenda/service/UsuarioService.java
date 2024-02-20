@@ -31,6 +31,7 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
-    public void salvar(Usuario usuario) { repository.save(usuario);
+    public void salvar(Usuario usuario) {
+        repository.save(usuario);
     }
 }

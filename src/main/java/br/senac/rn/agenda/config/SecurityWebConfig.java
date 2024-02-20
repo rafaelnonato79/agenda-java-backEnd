@@ -31,7 +31,7 @@ public class SecurityWebConfig{
         http
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/").permitAll()
-                        .requestMatchers("/cadastro").permitAll()
+                        .requestMatchers("usuario/**").permitAll()
                         .requestMatchers("/usuarios").permitAll()
                         .anyRequest().authenticated()
                 )
