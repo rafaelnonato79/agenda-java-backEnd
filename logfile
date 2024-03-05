@@ -428,3 +428,94 @@
 2024-03-04 20:08:31.460 -03 [7428] DETALHE:  A conex„o correspondeu ao arquivo "c:/users/a95133290/appdata/roaming/pgsql/mydata/pg_hba.conf" linha 115: "host    all             all             127.0.0.1/32            scram-sha-256"
 2024-03-04 20:10:18.690 -03 [17384] FATAL:  banco de dados "db_agenda" n„o existe
 2024-03-04 20:10:21.165 -03 [16208] FATAL:  banco de dados "db_agenda" n„o existe
+2024-03-04 20:12:57.015 -03 [11404] ERRO:  erro de sintaxe no fim da entrada no caractere 30
+2024-03-04 20:12:57.015 -03 [11404] COMANDO:  create database DB_AGENDA
+	go
+2024-03-04 20:13:03.993 -03 [1300] LOG:  checkpoint starting: time
+2024-03-04 20:13:08.523 -03 [1300] LOG:  checkpoint complete: wrote 43 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.392 s, sync=0.126 s, total=4.535 s; sync files=307, longest=0.003 s, average=0.001 s; distance=259 kB, estimate=259 kB; lsn=0/1A28E08, redo lsn=0/15B4798
+2024-03-04 20:17:41.840 -03 [11404] ERRO:  rela√ß√£o "fone" n√£o existe
+2024-03-04 20:17:41.840 -03 [11404] COMANDO:  CREATE TABLE TB_CONTATO (
+	    CON_ID SERIAL PRIMARY KEY,
+	    CON_NOME VARCHAR(100),
+	    CON_FON_ID INTEGER,
+	    CON_EMAIL VARCHAR(200),
+	    CON_END_ID INTEGER,
+	    FOREIGN KEY (CON_FON_ID) REFERENCES fone(FON_ID),
+	    FOREIGN KEY (CON_END_ID) REFERENCES endereco(END_ID)
+	)
+2024-03-04 20:18:03.535 -03 [1300] LOG:  checkpoint starting: time
+2024-03-04 20:19:00.544 -03 [11404] ERRO:  rela√ß√£o "fone" n√£o existe
+2024-03-04 20:19:00.544 -03 [11404] COMANDO:  CREATE TABLE contato (
+	    CON_ID SERIAL PRIMARY KEY,
+	    CON_NOME VARCHAR(100),
+	    CON_FON_ID INTEGER,
+	    CON_EMAIL VARCHAR(200),
+	    CON_END_ID INTEGER,
+	    FOREIGN KEY (CON_FON_ID) REFERENCES fone(FON_ID),
+	    FOREIGN KEY (CON_END_ID) REFERENCES endereco(END_ID)
+	)
+2024-03-04 20:19:25.403 -03 [11404] ERRO:  rela√ß√£o "tb_endereco" n√£o existe
+2024-03-04 20:19:25.403 -03 [11404] COMANDO:  CREATE TABLE contato (
+	    CON_ID SERIAL PRIMARY KEY,
+	    CON_NOME VARCHAR(100),
+	    CON_FON_ID INTEGER,
+	    CON_EMAIL VARCHAR(200),
+	    CON_END_ID INTEGER,
+	    FOREIGN KEY (CON_FON_ID) REFERENCES tb_fone(FON_ID),
+	    FOREIGN KEY (CON_END_ID) REFERENCES tb_endereco(END_ID)
+	)
+2024-03-04 20:19:56.463 -03 [1300] LOG:  checkpoint complete: wrote 1037 buffers (6.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=112.729 s, sync=0.184 s, total=112.929 s; sync files=323, longest=0.002 s, average=0.001 s; distance=4819 kB, estimate=4819 kB; lsn=0/1A9A4A8, redo lsn=0/1A69660
+2024-03-04 20:20:28.490 -03 [11404] ERRO:  rela√ß√£o "fone" n√£o existe
+2024-03-04 20:20:28.490 -03 [11404] COMANDO:  CREATE TABLE tb_contato (
+	    CON_ID SERIAL PRIMARY KEY,
+	    CON_NOME VARCHAR(100),
+	    CON_FON_ID INTEGER,
+	    CON_EMAIL VARCHAR(200),
+	    CON_END_ID INTEGER,
+	    FOREIGN KEY (CON_FON_ID) REFERENCES fone(FON_ID),
+	    FOREIGN KEY (CON_END_ID) REFERENCES endereco(END_ID)
+	)
+2024-03-04 20:23:03.486 -03 [1300] LOG:  checkpoint starting: time
+2024-03-04 20:23:11.887 -03 [1300] LOG:  checkpoint complete: wrote 77 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.352 s, sync=0.034 s, total=8.402 s; sync files=56, longest=0.007 s, average=0.001 s; distance=265 kB, estimate=4364 kB; lsn=0/1AABDB0, redo lsn=0/1AABD78
+2024-03-04 20:27:50.740 -03 [11404] ERRO:  rela√ß√£o "tb_fone" n√£o existe
+2024-03-04 20:27:50.740 -03 [11404] COMANDO:  
+	
+	CREATE TABLE TB_CONTATOS (
+	    CON_ID SERIAL PRIMARY KEY,
+	    CON_NOME VARCHAR(100),
+	    CON_FON_ID INTEGER,
+	    CON_EMAIL VARCHAR(200),
+	    CON_END_ID INTEGER,
+	    FOREIGN KEY (CON_FON_ID) REFERENCES tb_fone(FON_ID),
+	    FOREIGN KEY (CON_END_ID) REFERENCES tb_endereco(END_ID)
+	)
+	
+2024-03-04 20:28:03.901 -03 [1300] LOG:  checkpoint starting: time
+2024-03-04 20:28:13.364 -03 [1300] LOG:  checkpoint complete: wrote 87 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.383 s, sync=0.057 s, total=9.464 s; sync files=85, longest=0.007 s, average=0.001 s; distance=435 kB, estimate=3971 kB; lsn=0/1B18D60, redo lsn=0/1B18CF0
+2024-03-04 20:28:16.766 -03 [11404] ERRO:  rela√ß√£o "tb_enderecos" n√£o existe
+2024-03-04 20:28:16.766 -03 [11404] COMANDO:  
+	
+	CREATE TABLE TB_CONTATOS (
+	    CON_ID SERIAL PRIMARY KEY,
+	    CON_NOME VARCHAR(100),
+	    CON_FON_ID INTEGER,
+	    CON_EMAIL VARCHAR(200),
+	    CON_END_ID INTEGER,
+	    FOREIGN KEY (CON_FON_ID) REFERENCES TB_FONES(FON_ID),
+	    FOREIGN KEY (CON_END_ID) REFERENCES TB_ENDERECOS(END_ID)
+	)
+2024-03-04 20:33:03.368 -03 [1300] LOG:  checkpoint starting: time
+2024-03-04 20:33:11.052 -03 [1300] LOG:  checkpoint complete: wrote 70 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.622 s, sync=0.043 s, total=7.685 s; sync files=70, longest=0.007 s, average=0.001 s; distance=254 kB, estimate=3599 kB; lsn=0/1B58668, redo lsn=0/1B58630
+2024-03-04 20:38:03.065 -03 [1300] LOG:  checkpoint starting: time
+2024-03-04 20:38:07.367 -03 [1300] LOG:  checkpoint complete: wrote 40 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.250 s, sync=0.032 s, total=4.302 s; sync files=43, longest=0.007 s, average=0.001 s; distance=195 kB, estimate=3259 kB; lsn=0/1B89600, redo lsn=0/1B895C8
+2024-03-04 20:43:03.376 -03 [1300] LOG:  checkpoint starting: time
+2024-03-04 20:43:04.605 -03 [1300] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.206 s, sync=0.015 s, total=1.230 s; sync files=10, longest=0.007 s, average=0.002 s; distance=8 kB, estimate=2934 kB; lsn=0/1B8B7E8, redo lsn=0/1B8B7B0
+2024-03-04 21:13:28.128 -03 [16560] LOG:  processo servidor (PID 11404) foi terminado pela exceÁ„o 0xC000013A
+2024-03-04 21:13:28.128 -03 [16560] DETALHE:  Processo que falhou estava executando: SHOW search_path
+2024-03-04 21:13:28.128 -03 [16560] DICA:  Veja o arquivo de cabeÁalho C "ntstatus.h" para obter uma descriÁ„o do valor hexadecimal.
+2024-03-04 21:13:28.129 -03 [16560] LOG:  terminando quaisquer outros processos servidor ativos
+2024-03-04 21:13:28.148 -03 [16560] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-03-04 21:13:28.186 -03 [16560] LOG:  processo de ativaÁ„o (PID 17976) foi terminado pela exceÁ„o 0xC0000142
+2024-03-04 21:13:28.186 -03 [16560] DICA:  Veja o arquivo de cabeÁalho C "ntstatus.h" para obter uma descriÁ„o do valor hexadecimal.
+2024-03-04 21:13:28.186 -03 [16560] LOG:  interrompendo a ativaÁ„o devido a falha no processo de ativaÁ„o
+2024-03-04 21:13:28.188 -03 [16560] LOG:  sistema de banco de dados est· desligado
