@@ -47,4 +47,10 @@ public class SecurityWebConfig{
      public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
      }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return usuarioService; // Supondo que seu UsuarioService implemente UserDetailsService
+    }
+
 }

@@ -417,3 +417,14 @@
 2024-02-19 21:20:32.542 -03 [14548] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
 2024-02-19 21:20:32.543 -03 [14548] LOG:  interrompendo inicialização porque o processo de inicialização falhou
 2024-02-19 21:20:32.545 -03 [14548] LOG:  sistema de banco de dados está desligado
+2024-03-04 20:08:03.908 -03 [16560] LOG:  iniciando PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
+2024-03-04 20:08:03.913 -03 [16560] LOG:  escutando no endereço IPv6 "::1", porta 5432
+2024-03-04 20:08:03.913 -03 [16560] LOG:  escutando no endereço IPv4 "127.0.0.1", porta 5432
+2024-03-04 20:08:03.989 -03 [7264] LOG:  sistema de banco de dados foi desligado em 2024-03-04 20:05:03 -03
+2024-03-04 20:08:04.010 -03 [16560] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-03-04 20:08:29.234 -03 [12452] FATAL:  autenticação do tipo senha falhou para o usuário "postgres"
+2024-03-04 20:08:29.234 -03 [12452] DETALHE:  A conexão correspondeu ao arquivo "c:/users/a95133290/appdata/roaming/pgsql/mydata/pg_hba.conf" linha 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2024-03-04 20:08:31.460 -03 [7428] FATAL:  autenticação do tipo senha falhou para o usuário "postgres"
+2024-03-04 20:08:31.460 -03 [7428] DETALHE:  A conexão correspondeu ao arquivo "c:/users/a95133290/appdata/roaming/pgsql/mydata/pg_hba.conf" linha 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2024-03-04 20:10:18.690 -03 [17384] FATAL:  banco de dados "db_agenda" não existe
+2024-03-04 20:10:21.165 -03 [16208] FATAL:  banco de dados "db_agenda" não existe
