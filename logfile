@@ -519,3 +519,57 @@
 2024-03-04 21:13:28.186 -03 [16560] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
 2024-03-04 21:13:28.186 -03 [16560] LOG:  interrompendo a ativação devido a falha no processo de ativação
 2024-03-04 21:13:28.188 -03 [16560] LOG:  sistema de banco de dados está desligado
+2024-03-18 18:46:30.628 -03 [11332] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-03-18 18:46:30.632 -03 [11332] LOG:  listening on IPv6 address "::1", port 5432
+2024-03-18 18:46:30.632 -03 [11332] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-03-18 18:46:30.680 -03 [9944] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-03-18 18:42:46 -03
+2024-03-18 18:46:31.055 -03 [9944] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-03-18 18:46:31.057 -03 [9944] LOG:  redo inicia em 0/2966278
+2024-03-18 18:46:31.057 -03 [9944] LOG:  invalid record length at 0/29662B0: expected at least 24, got 0
+2024-03-18 18:46:31.057 -03 [9944] LOG:  redo done at 0/2966278 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-18 18:46:31.062 -03 [3268] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-18 18:46:31.071 -03 [3268] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.012 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/29662B0, redo lsn=0/29662B0
+2024-03-18 18:46:31.083 -03 [11332] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-03-18 18:47:34.169 -03 [9292] FATAL:  autenticação do tipo password falhou para usuário "postgres"
+2024-03-18 18:47:34.169 -03 [9292] DETALHE:  Connection matched file "c:/users/a95133290/appdata/roaming/pgsql/mydata/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2024-03-18 18:47:36.296 -03 [10136] FATAL:  autenticação do tipo password falhou para usuário "postgres"
+2024-03-18 18:47:36.296 -03 [10136] DETALHE:  Connection matched file "c:/users/a95133290/appdata/roaming/pgsql/mydata/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2024-03-18 18:48:00.433 -03 [11632] FATAL:  autenticação do tipo password falhou para usuário "postgres"
+2024-03-18 18:48:00.433 -03 [11632] DETALHE:  Connection matched file "c:/users/a95133290/appdata/roaming/pgsql/mydata/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2024-03-18 18:48:02.296 -03 [15156] FATAL:  autenticação do tipo password falhou para usuário "postgres"
+2024-03-18 18:48:02.296 -03 [15156] DETALHE:  Connection matched file "c:/users/a95133290/appdata/roaming/pgsql/mydata/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2024-03-18 18:50:12.725 -03 [8372] ERRO:  nÃ£o pode remover tabela tb_papeis porque outros objetos dependem dele
+2024-03-18 18:50:12.725 -03 [8372] DETALHE:  restriÃ§Ã£o fk8kam8ajtapqydbxhan6llcah7 em tabela tb_usuario_papeis depende de tabela tb_papeis
+	restriÃ§Ã£o fk2y2r7mbon96mk02mok7vgi2oj em tabela tb_papeis_usuario depende de tabela tb_papeis
+2024-03-18 18:50:12.725 -03 [8372] DICA:  Utilize DROP ... CASCADE para remover os objetos dependentes tambÃ©m.
+2024-03-18 18:50:12.725 -03 [8372] COMANDO:  DROP TABLE public.tb_papeis
+2024-03-18 18:50:16.090 -03 [8372] ERRO:  nÃ£o pode remover tabela tb_papeis porque outros objetos dependem dele
+2024-03-18 18:50:16.090 -03 [8372] DETALHE:  restriÃ§Ã£o fk8kam8ajtapqydbxhan6llcah7 em tabela tb_usuario_papeis depende de tabela tb_papeis
+	restriÃ§Ã£o fk2y2r7mbon96mk02mok7vgi2oj em tabela tb_papeis_usuario depende de tabela tb_papeis
+2024-03-18 18:50:16.090 -03 [8372] DICA:  Utilize DROP ... CASCADE para remover os objetos dependentes tambÃ©m.
+2024-03-18 18:50:16.090 -03 [8372] COMANDO:  DROP TABLE public.tb_papeis
+2024-03-18 18:50:19.645 -03 [8372] ERRO:  nÃ£o pode remover tabela tb_usuario porque outros objetos dependem dele
+2024-03-18 18:50:19.645 -03 [8372] DETALHE:  restriÃ§Ã£o fkqytp9k9sprc7ijng7uwoak44x em tabela tb_usuario_papeis depende de tabela tb_usuario
+2024-03-18 18:50:19.645 -03 [8372] DICA:  Utilize DROP ... CASCADE para remover os objetos dependentes tambÃ©m.
+2024-03-18 18:50:19.645 -03 [8372] COMANDO:  DROP TABLE public.tb_usuario
+2024-03-18 18:50:25.165 -03 [8372] ERRO:  nÃ£o pode remover tabela tb_usuario porque outros objetos dependem dele
+2024-03-18 18:50:25.165 -03 [8372] DETALHE:  restriÃ§Ã£o fkqytp9k9sprc7ijng7uwoak44x em tabela tb_usuario_papeis depende de tabela tb_usuario
+2024-03-18 18:50:25.165 -03 [8372] DICA:  Utilize DROP ... CASCADE para remover os objetos dependentes tambÃ©m.
+2024-03-18 18:50:25.165 -03 [8372] COMANDO:  DROP TABLE public.tb_usuario
+2024-03-18 18:50:30.454 -03 [8372] ERRO:  nÃ£o pode remover tabela tb_papeis porque outros objetos dependem dele
+2024-03-18 18:50:30.454 -03 [8372] DETALHE:  restriÃ§Ã£o fk8kam8ajtapqydbxhan6llcah7 em tabela tb_usuario_papeis depende de tabela tb_papeis
+2024-03-18 18:50:30.454 -03 [8372] DICA:  Utilize DROP ... CASCADE para remover os objetos dependentes tambÃ©m.
+2024-03-18 18:50:30.454 -03 [8372] COMANDO:  DROP TABLE public.tb_papeis
+2024-03-18 18:51:31.071 -03 [3268] LOG:  checkpoint starting: time
+2024-03-18 18:51:40.682 -03 [3268] LOG:  checkpoint complete: wrote 88 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.561 s, sync=0.033 s, total=9.611 s; sync files=73, longest=0.007 s, average=0.001 s; distance=557 kB, estimate=557 kB; lsn=0/29F16F0, redo lsn=0/29F16B8
+2024-03-18 18:56:31.694 -03 [3268] LOG:  checkpoint starting: time
+2024-03-18 18:56:33.354 -03 [3268] LOG:  checkpoint complete: wrote 15 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.647 s, sync=0.005 s, total=1.661 s; sync files=8, longest=0.001 s, average=0.001 s; distance=25 kB, estimate=503 kB; lsn=0/29F7EA0, redo lsn=0/29F7E68
+2024-03-18 19:14:58.149 -03 [11332] LOG:  processo servidor (PID 18040) foi terminado pela exceção 0xC000013A
+2024-03-18 19:14:58.149 -03 [11332] DETALHE:  Processo que falhou estava executando: SHOW TRANSACTION ISOLATION LEVEL
+2024-03-18 19:14:58.149 -03 [11332] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-03-18 19:14:58.151 -03 [11332] LOG:  terminando quaisquer outros processos servidor ativos
+2024-03-18 19:14:58.178 -03 [11332] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-03-18 19:14:58.209 -03 [11332] LOG:  processo de inicialização (PID 15432) foi terminado pela exceção 0xC0000142
+2024-03-18 19:14:58.209 -03 [11332] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-03-18 19:14:58.209 -03 [11332] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-03-18 19:14:58.211 -03 [11332] LOG:  sistema de banco de dados está desligado

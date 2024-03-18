@@ -14,7 +14,7 @@
     <name>agenda</name>
     <description>Back-End da Agenda Web</description>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <!-- starter-web: dependências para criar uma aplicação web -->
