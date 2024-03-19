@@ -18,19 +18,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityWebConfig{
-
-    private final UsuarioService usuarioService;
-
-    @Autowired
-     public SecurityWebConfig(UsuarioService usuarioService){
-         this.usuarioService = usuarioService;
-     }
-
      @Bean
      public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/").permitAll()
+                        .requestMatchers("/novo-contato").permitAll()
                         .requestMatchers("usuario/**").permitAll()
                         .requestMatchers("/usuarios").permitAll()
                         .anyRequest().authenticated()
@@ -46,11 +39,7 @@ public class SecurityWebConfig{
      @Bean
      public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
-     }
+      }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        return usuarioService; // Supondo que seu UsuarioService implemente UserDetailsService
-    }
 
 }

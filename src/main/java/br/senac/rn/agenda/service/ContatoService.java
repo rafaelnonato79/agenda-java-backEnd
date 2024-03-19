@@ -14,6 +14,7 @@ public class ContatoService {
     @Autowired
     private ContatoRepository repository;
 
+
     public void salvar(Contato contato) {
         repository.save(contato);
     }
@@ -34,4 +35,5 @@ public class ContatoService {
     public void excluir(Integer id) {
         repository.deleteById(id);
     }
+
 }
