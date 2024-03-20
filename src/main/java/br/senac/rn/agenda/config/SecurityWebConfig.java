@@ -32,6 +32,10 @@ public class SecurityWebConfig{
                         .loginPage("/login")
                         .permitAll()
                 )
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .permitAll()
+                )
                 .rememberMe(Customizer.withDefaults());
         return http.build();
      }

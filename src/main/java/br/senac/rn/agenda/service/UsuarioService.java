@@ -3,6 +3,7 @@ package br.senac.rn.agenda.service;
 import br.senac.rn.agenda.model.Usuario;
 import br.senac.rn.agenda.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -41,4 +42,11 @@ public class UsuarioService implements UserDetailsService {
         repository.save(usuario);
     }
 
+    public Usuario getUsuarioLogado() {
+     Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+     if(principal instanceof Usuario){
+         return (Usuario) principal;
+        }
+     return null;
+    }
 }

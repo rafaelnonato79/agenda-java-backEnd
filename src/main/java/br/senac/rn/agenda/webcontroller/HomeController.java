@@ -6,6 +6,9 @@ import br.senac.rn.agenda.model.TipoFone;
 import br.senac.rn.agenda.model.Usuario;
 import br.senac.rn.agenda.service.ContatoService;
 import br.senac.rn.agenda.service.UsuarioService;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,11 +29,18 @@ public class HomeController {
     public HomeController(ContatoService service, UsuarioService usuarioService){
         this.service = service;
         this.usuarioService = usuarioService;
+
     }
     @GetMapping
     public String index(Model model){
-        List<Contato> contatos = service.listarTodos();
+        String usuario = usuarioService.getUsuarioLogado().getUsuario();
+        List<Contato> contatos = service.listarPorUsuario(usuario);
         model.addAttribute("contatos", contatos);
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String nomeUsuario = authentication.getName();
+        model.addAttribute("usuario", nomeUsuario);
+
         return "index";
     }
 
@@ -44,6 +54,8 @@ public class HomeController {
 
     @PostMapping("salvar")
     public String salvar(Contato contato){
+        Usuario usuario = usuarioService.getUsuarioLogado();
+        contato.setUsuario(usuario);
         service.salvar(contato);
         return "redirect:/";
     }
@@ -67,7 +79,9 @@ public class HomeController {
         return "login";
     }
 
-
-
+    @GetMapping("logout")
+    public String logout(){
+        return "redirect:/login";
+    }
 }
 
