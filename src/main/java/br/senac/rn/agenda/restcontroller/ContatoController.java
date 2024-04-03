@@ -22,12 +22,17 @@ public class ContatoController {
         return service.listarTodos();
     }
 
+    @GetMapping("{id}")
+    public Contato listarPorId(@PathVariable Integer id){
+        return service.listarPorId(id);
+    }
+
     @PostMapping
     public void salvar(@RequestBody Contato contato) {
         service.salvar(contato);
     }
 
-    @GetMapping("{fone}")
+    @GetMapping("fone/{fone}")
     public List<Contato> listarPorFone(@PathVariable String fone) {
         return service.listarPorFone(fone);
     }

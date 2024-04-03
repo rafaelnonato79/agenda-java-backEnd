@@ -599,3 +599,134 @@
 2024-03-18 21:20:15.306 -03 [8440] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
 2024-03-18 21:20:15.306 -03 [8440] LOG:  interrompendo inicialização porque o processo de inicialização falhou
 2024-03-18 21:20:15.309 -03 [8440] LOG:  sistema de banco de dados está desligado
+2024-03-19 18:56:58.043 -03 [20256] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-03-19 18:56:58.047 -03 [20256] LOG:  listening on IPv6 address "::1", port 5432
+2024-03-19 18:56:58.047 -03 [20256] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-03-19 18:56:58.126 -03 [19260] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-03-18 21:12:58 -03
+2024-03-19 18:56:58.772 -03 [19260] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-03-19 18:56:58.778 -03 [19260] LOG:  redo inicia em 0/2A19D20
+2024-03-19 18:56:58.778 -03 [19260] LOG:  invalid record length at 0/2A19E08: expected at least 24, got 0
+2024-03-19 18:56:58.778 -03 [19260] LOG:  redo done at 0/2A19DD0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-19 18:56:58.785 -03 [1300] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-19 18:56:58.806 -03 [1300] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.005 s, total=0.025 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/2A19E08, redo lsn=0/2A19E08
+2024-03-19 18:56:58.820 -03 [20256] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-03-19 18:59:28.890 -03 [19148] ERRO:  inserÃ§Ã£o ou atualizaÃ§Ã£o em tabela "tb_contato" viola restriÃ§Ã£o de chave estrangeira "fkjrnkbs2c2bkfglwvt6ido5qei"
+2024-03-19 18:59:28.890 -03 [19148] DETALHE:  Chave (con_usu_id)=(1) nÃ£o estÃ¡ presente na tabela "tb_usuario".
+2024-03-19 18:59:28.890 -03 [19148] COMANDO:  UPDATE public.tb_contato
+		SET con_usu_id=$1
+		WHERE con_id=$2
+2024-03-19 18:59:41.104 -03 [19148] ERRO:  inserÃ§Ã£o ou atualizaÃ§Ã£o em tabela "tb_contato" viola restriÃ§Ã£o de chave estrangeira "fkjrnkbs2c2bkfglwvt6ido5qei"
+2024-03-19 18:59:41.104 -03 [19148] DETALHE:  Chave (con_usu_id)=(1) nÃ£o estÃ¡ presente na tabela "tb_usuario".
+2024-03-19 18:59:41.104 -03 [19148] COMANDO:  UPDATE public.tb_contato
+		SET con_usu_id=$1
+		WHERE con_id=$2
+2024-03-19 19:01:58.866 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 19:01:59.213 -03 [1300] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.319 s, sync=0.015 s, total=0.348 s; sync files=4, longest=0.008 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/2A1A118, redo lsn=0/2A1A0E0
+2024-03-19 19:16:58.227 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 19:16:58.469 -03 [1300] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.222 s, sync=0.003 s, total=0.242 s; sync files=3, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/2A1A428, redo lsn=0/2A1A3F0
+2024-03-19 19:21:58.469 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 19:21:59.472 -03 [1300] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.980 s, sync=0.009 s, total=1.003 s; sync files=10, longest=0.004 s, average=0.001 s; distance=1 kB, estimate=1 kB; lsn=0/2A1ABF8, redo lsn=0/2A1ABC0
+2024-03-19 19:31:58.491 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 19:31:59.181 -03 [1300] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.659 s, sync=0.015 s, total=0.691 s; sync files=7, longest=0.007 s, average=0.003 s; distance=1 kB, estimate=1 kB; lsn=0/2A1B198, redo lsn=0/2A1B160
+2024-03-19 19:51:58.227 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 19:51:58.899 -03 [1300] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.650 s, sync=0.013 s, total=0.673 s; sync files=7, longest=0.007 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/2A1B978, redo lsn=0/2A1B940
+2024-03-19 20:06:58.925 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 20:06:59.606 -03 [1300] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.650 s, sync=0.014 s, total=0.682 s; sync files=7, longest=0.007 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/2A1C108, redo lsn=0/2A1C0D0
+2024-03-19 20:26:02.969 -03 [9428] ERRO:  duplicar valor da chave viola a restriÃ§Ã£o de unicidade "tb_usuario_pkey"
+2024-03-19 20:26:02.969 -03 [9428] DETALHE:  Chave (usu_usario)=(usuario1) jÃ¡ existe.
+2024-03-19 20:26:02.969 -03 [9428] COMANDO:  insert into tb_usuario (usu_nome,usu_senha,usu_usario) values ($1,$2,$3)
+2024-03-19 20:26:36.571 -03 [9428] ERRO:  duplicar valor da chave viola a restriÃ§Ã£o de unicidade "tb_usuario_pkey"
+2024-03-19 20:26:36.571 -03 [9428] DETALHE:  Chave (usu_usario)=(usuario1) jÃ¡ existe.
+2024-03-19 20:26:36.571 -03 [9428] COMANDO:  insert into tb_usuario (usu_nome,usu_senha,usu_usario) values ($1,$2,$3)
+2024-03-19 20:26:58.626 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 20:26:59.409 -03 [1300] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.754 s, sync=0.012 s, total=0.785 s; sync files=8, longest=0.007 s, average=0.002 s; distance=2 kB, estimate=2 kB; lsn=0/2A1CCE8, redo lsn=0/2A1CCB0
+2024-03-19 20:30:20.983 -03 [21348] ERRO:  duplicar valor da chave viola a restriÃ§Ã£o de unicidade "tb_usuario_pkey"
+2024-03-19 20:30:20.983 -03 [21348] DETALHE:  Chave (usu_usario)=(rafael) jÃ¡ existe.
+2024-03-19 20:30:20.983 -03 [21348] COMANDO:  insert into tb_usuario (usu_nome,usu_senha,usu_usario) values ($1,$2,$3)
+2024-03-19 20:31:58.412 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 20:31:59.433 -03 [1300] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.994 s, sync=0.013 s, total=1.021 s; sync files=10, longest=0.007 s, average=0.002 s; distance=3 kB, estimate=3 kB; lsn=0/2A1DCC8, redo lsn=0/2A1DC90
+2024-03-19 20:36:58.434 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 20:36:59.565 -03 [1300] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.108 s, sync=0.015 s, total=1.132 s; sync files=11, longest=0.007 s, average=0.002 s; distance=4 kB, estimate=4 kB; lsn=0/2A1ED48, redo lsn=0/2A1ED10
+2024-03-19 20:56:58.592 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 20:56:59.717 -03 [1300] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.097 s, sync=0.014 s, total=1.127 s; sync files=11, longest=0.007 s, average=0.002 s; distance=4 kB, estimate=4 kB; lsn=0/2A1FEC8, redo lsn=0/2A1FE90
+2024-03-19 21:11:58.735 -03 [1300] LOG:  checkpoint starting: time
+2024-03-19 21:11:59.993 -03 [1300] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.230 s, sync=0.014 s, total=1.259 s; sync files=12, longest=0.007 s, average=0.002 s; distance=5 kB, estimate=5 kB; lsn=0/2A21338, redo lsn=0/2A21300
+2024-03-19 21:18:40.878 -03 [20256] LOG:  processo servidor (PID 10092) foi terminado pela exceção 0xC000013A
+2024-03-19 21:18:40.878 -03 [20256] DETALHE:  Processo que falhou estava executando: select c.oid,pg_catalog.pg_total_relation_size(c.oid) as total_rel_size,pg_catalog.pg_relation_size(c.oid) as rel_size
+	FROM pg_class c
+	WHERE c.relnamespace=$1
+2024-03-19 21:18:40.878 -03 [20256] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-03-19 21:18:40.880 -03 [20256] LOG:  terminando quaisquer outros processos servidor ativos
+2024-03-19 21:18:40.922 -03 [20256] LOG:  todos os processos servidor foram terminados; reinicializando
+2024-03-19 21:18:40.981 -03 [20256] LOG:  processo de inicialização (PID 14596) foi terminado pela exceção 0xC0000142
+2024-03-19 21:18:40.981 -03 [20256] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-03-19 21:18:40.981 -03 [20256] LOG:  interrompendo inicialização porque o processo de inicialização falhou
+2024-03-19 21:18:40.984 -03 [20256] LOG:  sistema de banco de dados está desligado
+2024-03-20 19:23:03.619 -03 [25092] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-03-20 19:23:03.623 -03 [25092] LOG:  listening on IPv6 address "::1", port 5432
+2024-03-20 19:23:03.624 -03 [25092] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-03-20 19:23:03.683 -03 [23152] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-03-19 21:11:59 -03
+2024-03-20 19:23:04.219 -03 [23152] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-03-20 19:23:04.227 -03 [23152] LOG:  redo inicia em 0/2A21300
+2024-03-20 19:23:04.227 -03 [23152] LOG:  invalid record length at 0/2A213E8: expected at least 24, got 0
+2024-03-20 19:23:04.228 -03 [23152] LOG:  redo done at 0/2A213B0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-20 19:23:04.235 -03 [7796] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-20 19:23:04.254 -03 [7796] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.006 s, total=0.022 s; sync files=2, longest=0.005 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/2A213E8, redo lsn=0/2A213E8
+2024-03-20 19:23:04.276 -03 [25092] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-03-20 19:28:04.268 -03 [7796] LOG:  checkpoint starting: time
+2024-03-20 19:28:05.281 -03 [7796] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.984 s, sync=0.008 s, total=1.017 s; sync files=10, longest=0.002 s, average=0.001 s; distance=4 kB, estimate=4 kB; lsn=0/2A224D0, redo lsn=0/2A22498
+2024-03-20 19:53:04.333 -03 [7796] LOG:  checkpoint starting: time
+2024-03-20 19:53:05.451 -03 [7796] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.100 s, sync=0.006 s, total=1.122 s; sync files=11, longest=0.002 s, average=0.001 s; distance=5 kB, estimate=5 kB; lsn=0/2A239D0, redo lsn=0/2A23998
+2024-03-20 21:25:34.802 -03 [25092] LOG:  background worker "logical replication launcher" (PID 25532) foi terminado pela exceção 0xC000013A
+2024-03-20 21:25:34.802 -03 [25092] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-03-20 21:25:34.804 -03 [25092] LOG:  terminando quaisquer outros processos servidor ativos
+2024-03-20 21:25:34.820 -03 [25092] LOG:  todos os processos servidor foram terminados; reinicializando
+^C2024-03-25 18:36:30.022 -03 [23588] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-03-25 18:36:30.026 -03 [23588] LOG:  listening on IPv6 address "::1", port 5432
+2024-03-25 18:36:30.026 -03 [23588] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-03-25 18:36:30.082 -03 [8848] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-03-20 19:53:05 -03
+2024-03-25 18:36:30.765 -03 [8848] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-03-25 18:36:30.770 -03 [8848] LOG:  redo inicia em 0/2A23998
+2024-03-25 18:36:30.770 -03 [8848] LOG:  invalid record length at 0/2A23A80: expected at least 24, got 0
+2024-03-25 18:36:30.770 -03 [8848] LOG:  redo done at 0/2A23A48 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-25 18:36:30.778 -03 [17196] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-25 18:36:30.791 -03 [17196] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.017 s; sync files=2, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/2A23A80, redo lsn=0/2A23A80
+2024-03-25 18:36:30.808 -03 [23588] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-03-25 21:24:30.152 -03 [23588] LOG:  background worker "logical replication launcher" (PID 7620) foi terminado pela exceção 0xC000013A
+2024-03-25 21:24:30.152 -03 [23588] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-03-25 21:24:30.153 -03 [23588] LOG:  terminando quaisquer outros processos servidor ativos
+2024-03-25 21:24:30.164 -03 [23588] LOG:  pedido de desligamento rápido foi recebido
+^C2024-03-26 18:46:28.914 -03 [15084] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-03-26 18:46:28.918 -03 [15084] LOG:  listening on IPv6 address "::1", port 5432
+2024-03-26 18:46:28.918 -03 [15084] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-03-26 18:46:28.986 -03 [16452] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-03-25 18:36:30 -03
+2024-03-26 18:46:29.709 -03 [16452] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-03-26 18:46:29.716 -03 [16452] LOG:  redo inicia em 0/2A23AF8
+2024-03-26 18:46:29.716 -03 [16452] LOG:  invalid record length at 0/2A23B30: expected at least 24, got 0
+2024-03-26 18:46:29.716 -03 [16452] LOG:  redo done at 0/2A23AF8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-26 18:46:29.723 -03 [26172] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-26 18:46:29.745 -03 [26172] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.005 s, total=0.026 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/2A23B30, redo lsn=0/2A23B30
+2024-03-26 18:46:29.765 -03 [15084] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-03-26 20:32:17.500 -03 [15084] LOG:  background worker "logical replication launcher" (PID 25488) foi terminado pela exceção 0xC000013A
+2024-03-26 20:32:17.500 -03 [15084] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-03-26 20:32:17.501 -03 [15084] LOG:  terminando quaisquer outros processos servidor ativos
+2024-04-01 19:12:36.220 -03 [26988] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-04-01 19:12:36.225 -03 [26988] LOG:  listening on IPv6 address "::1", port 5432
+2024-04-01 19:12:36.225 -03 [26988] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-04-01 19:12:36.285 -03 [22204] LOG:  sistema de banco de dados foi interrompido; última execução em 2024-03-26 18:46:29 -03
+2024-04-01 19:12:36.903 -03 [22204] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2024-04-01 19:12:36.909 -03 [22204] LOG:  redo inicia em 0/2A23BA8
+2024-04-01 19:12:36.909 -03 [22204] LOG:  invalid record length at 0/2A23BE0: expected at least 24, got 0
+2024-04-01 19:12:36.909 -03 [22204] LOG:  redo done at 0/2A23BA8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-04-01 19:12:36.915 -03 [15296] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-04-01 19:12:36.926 -03 [15296] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.003 s, total=0.014 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/2A23BE0, redo lsn=0/2A23BE0
+2024-04-01 19:12:36.943 -03 [26988] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2024-04-01 19:47:37.001 -03 [15296] LOG:  checkpoint starting: time
+2024-04-01 19:47:38.021 -03 [15296] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.988 s, sync=0.017 s, total=1.029 s; sync files=10, longest=0.007 s, average=0.002 s; distance=4 kB, estimate=4 kB; lsn=0/2A24E90, redo lsn=0/2A24E58
+2024-04-01 19:52:36.028 -03 [15296] LOG:  checkpoint starting: time
+2024-04-01 19:52:37.035 -03 [15296] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.993 s, sync=0.007 s, total=1.008 s; sync files=10, longest=0.002 s, average=0.001 s; distance=5 kB, estimate=5 kB; lsn=0/2A264A8, redo lsn=0/2A26470
+2024-04-01 21:19:31.756 -03 [26988] LOG:  background worker "logical replication launcher" (PID 3048) foi terminado pela exceção 0xC000013A
+2024-04-01 21:19:31.756 -03 [26988] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2024-04-01 21:19:31.757 -03 [26988] LOG:  terminando quaisquer outros processos servidor ativos
+2024-04-01 21:19:31.770 -03 [26988] LOG:  todos os processos servidor foram terminados; reinicializando
+^C
